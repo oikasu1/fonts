@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'BpmfZihiSerif-Regular';
+    src: local('BpmfZihiSerif-Regular'),
+         url('BpmfZihiSerif-Regular.woff2') format('woff2'),
+         url('BpmfZihiSerif-Regular.woff') format('woff');
+}
+
+.song-bpmf, .BpmfZihiSerif-Regular, .BpmfZihiSerif-Regular{
+    font-family: 'BpmfZihiSerif-Regular';
+}
+
+@font-face {
+    font-family: 'BpmfZihiKaiStd-Regular';
+    src: local('BpmfZihiKaiStd-Regular'),
+         url('BpmfZihiKaiStd-Regular.woff2') format('woff2'),
+         url('BpmfZihiKaiStd-Regular.woff') format('woff');
+}
+
+.kai-bpmf, .BpmfZihiKaiStd, .BpmfZihiKaiStd-Regular{
+    font-family: 'BpmfZihiKaiStd-Regular';
+}
+
+@font-face {
+    font-family: 'BpmfZihiSans-Regular';
+    src: local('BpmfZihiSans-Regular'),
+         url('BpmfZihiSans-Regular.woff2') format('woff2'),
+         url('BpmfZihiSans-Regular.woff') format('woff');
+}
+
+.hei-bpmf, .BpmfZihiSans-Regular{
+    font-family: 'BpmfZihiSans-Regular';
+}
+
+@font-face {
+    font-family: 'BpmfZihiBox-R';
+    src: local('BpmfZihiBox-R'),
+         url('BpmfZihiBox-R.woff2') format('woff2'),
+         url('BpmfZihiBox-R.woff') format('woff');
+}
+
+.box-bpmf, .BpmfZihiBox-R{
+    font-family: 'BpmfZihiBox-R';
+}
+
+@font-face {
+    font-family: 'BpmfZihiOnly-R';
+    src: local('BpmfZihiOnly-R'),
+         url('BpmfZihiOnly-R.woff2') format('woff2'),
+         url('BpmfZihiOnly-R.woff') format('woff');
+}
+
+.only-bpmf, .BpmfZihiOnly-R{
+    font-family: 'BpmfZihiOnly-R';
+}
+
+@font-face {
+    font-family: 'TaigiGenRyuM-TL-R';
+    src: local('TaigiGenRyuM-TL-R'),
+         url('TaigiGenRyuM-TL-R.woff2') format('woff2'),
+         url('TaigiGenRyuM-TL-R.woff') format('woff');
+}
+
+.song-tl, .TaigiGenRyuM-TL-R{
+    font-family: 'TaigiGenRyuM-TL-R';
+}
+
+@font-face {
+    font-family: 'TaigiGenRyuM-TLHI-R';
+    src: local('TaigiGenRyuM-TLHI-R'),
+         url('TaigiGenRyuM-TLHI-R.woff2') format('woff2'),
+         url('TaigiGenRyuM-TLHI-R.woff') format('woff');
+}
+
+.song-tlhi, .TaigiGenRyuM-TLHI-R{
+    font-family: 'TaigiGenRyuM-TLHI-R';
+}
+
+@font-face {
+    font-family: 'TaigiGenRyuM-HI-R';
+    src: local('TaigiGenRyuM-HI-R'),
+         url('TaigiGenRyuM-HI-R.woff2') format('woff2'),
+         url('TaigiGenRyuM-HI-R.woff') format('woff');
+}
+
+.song-hi, .TaigiGenRyuM-HI-R{
+    font-family: 'TaigiGenRyuM-HI-R';
+}
+
+@font-face {
+    font-family: 'TaigiKaiStd-TL-R';
+    src: local('TaigiKaiStd-TL-R'),
+         url('TaigiKaiStd-TL-R.woff2') format('woff2'),
+         url('TaigiKaiStd-TL-R.woff') format('woff');
+}
+
+.kai-tl, .TaigiKaiStd-TL-R{
+    font-family: 'TaigiKaiStd-TL-R';
+}
+
+@font-face {
+    font-family: 'TaigiKaiStd-TLHI-R';
+    src: local('TaigiKaiStd-TLHI-R'),
+         url('TaigiKaiStd-TLHI-R.woff2') format('woff2'),
+         url('TaigiKaiStd-TLHI-R.woff') format('woff');
+}
+
+.kai-tlhi, .TaigiKaiStd-TLHI-R{
+    font-family: 'TaigiKaiStd-TLHI-R';
+}
+
+@font-face {
+    font-family: 'TaigiKaiStd-HI-R';
+    src: local('TaigiKaiStd-HI-R'),
+         url('TaigiKaiStd-HI-R.woff2') format('woff2'),
+         url('TaigiKaiStd-HI-R.woff') format('woff');
+}
+
+.kai-hi, .TaigiKaiStd-HI-R{
+    font-family: 'TaigiKaiStd-HI-R';
+}
+
+@font-face {
+    font-family: 'TaigiGenSekiG-TL-R';
+    src: local('TaigiGenSekiG-TL-R'),
+         url('TaigiGenSekiG-TL-R.woff2') format('woff2'),
+         url('TaigiGenSekiG-TL-R.woff') format('woff');
+}
+
+.hei-tl, .TaigiGenSekiG-TL-R{
+    font-family: 'TaigiGenSekiG-TL-R';
+}
+
+@font-face {
+    font-family: 'TaigiGenSekiG-TLHI-R';
+    src: local('TaigiGenSekiG-TLHI-R'),
+         url('TaigiGenSekiG-TLHI-R.woff2') format('woff2'),
+         url('TaigiGenSekiG-TLHI-R.woff') format('woff');
+}
+
+.hei-tlhi, .TaigiGenSekiG-TLHI-R{
+    font-family: 'TaigiGenSekiG-TLHI-R';
+}
+
+@font-face {
+    font-family: 'WenFont';
+    src: local('WenFont'),
+         url('wenfont.woff2') format('woff2'),
+         url('wenfont.woff') format('woff');
+}
+
+.hei-hi, .TaigiGenSekiG-HI-R{
+    font-family: 'TaigiGenSekiG-HI-R';
+}
+
+@font-face {
+    font-family: 'EngTRESSA';
+    src: local('EngTRESSA'),
+         url('EngTRESSA.woff2') format('woff2'),
+         url('EngTRESSA.woff') format('woff');
+}
+
+.engtress, .engtress-a .EngTRESSA{
+    font-family: 'EngTRESSA';
+}
+
+@font-face {
+    font-family: 'EngTRESSB';
+    src: local('EngTRESSB'),
+         url('EngTRESSB.woff2') format('woff2'),
+         url('EngTRESSB.woff') format('woff');
+}
+
+.engtress-b, .EngTRESSB{
+    font-family: 'EngTRESSB';
+}
+
+@font-face{
+    font-family:tauhu-oo;
+	src: local("TauhuOo20.05-Regular"),
+	    url(https://tauhu.tw/TauhuOo20.05-Regular.woff2) format("woff2"),
+		url(https://tauhu.tw/TauhuOo20.05-Regular.otf) format("opentype")
+}
+
+.tauhu-oo{
+    font-family: 'tauhu-oo';
+}

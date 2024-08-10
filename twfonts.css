@@ -142,15 +142,58 @@
 }
 
 @font-face {
-    font-family: 'WenFont';
-    src: local('WenFont'),
-         url('wenfont.woff2') format('woff2'),
-         url('wenfont.woff') format('woff');
+    font-family: 'TaigiGenSekiG-HI-R';
+    src: local('TaigiGenSekiG-HI-R'),
+         url('TaigiGenSekiG-HI-R.woff2') format('woff2'),
+         url('TaigiGenSekiG-HI-R.woff') format('woff');
 }
 
 .hei-hi, .TaigiGenSekiG-HI-R{
     font-family: 'TaigiGenSekiG-HI-R';
 }
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'TaigiGenSenR-TL-R';
+    src: local('TaigiGenSenR-TL-R'),
+         url('TaigiGenSenR-TL-R.woff2') format('woff2'),
+         url('TaigiGenSenR-TL-R.woff') format('woff');
+}
+
+.round-tl, .TaigiGenSenR-TL-R{
+    font-family: 'TaigiGenSenR-TL-R';
+}
+
+@font-face {
+    font-family: 'TaigiGenSenR-TLHI-R';
+    src: local('TaigiGenSenR-TLHI-R'),
+         url('TaigiGenSenR-TLHI-R.woff2') format('woff2'),
+         url('TaigiGenSenR-TLHI-R.woff') format('woff');
+}
+
+.round-tlhi, .TaigiGenSenR-TLHI-R{
+    font-family: 'TaigiGenSenR-TLHI-R';
+}
+
+@font-face {
+    font-family: 'TaigiGenSenR-HI-R';
+    src: local('TaigiGenSenR-HI-R'),
+         url('TaigiGenSenR-HI-R.woff2') format('woff2'),
+         url('TaigiGenSenR-HI-R.woff') format('woff');
+}
+
+.round-hi, .TaigiGenSenR-HI-R{
+    font-family: 'TaigiGenSenR-HI-R';
+}
+
+
 
 @font-face {
     font-family: 'EngTRESSA';
@@ -159,7 +202,7 @@
          url('EngTRESSA.woff') format('woff');
 }
 
-.engtress, .engtress-a .EngTRESSA{
+.engtress, .engtress-a, .EngTRESS, .EngTRESSA{
     font-family: 'EngTRESSA';
 }
 

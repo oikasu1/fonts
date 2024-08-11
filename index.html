@@ -97,7 +97,7 @@
         overflow: hidden;
     }
 
-    #cssLink {
+    .myLink {
         background-color: #f0f0f0;
         padding: 5px 10px;
         border-radius: 3px;
@@ -108,7 +108,7 @@
         max-width: calc(100% - 105px);
     }
 
-    #copyButton {
+    .copyButton {
         margin-left: 10px;
         padding: 5px 10px;
         background-color: #4CAF50;
@@ -166,9 +166,15 @@
 		<a href="https://buttaiwan.github.io/taigivs/" target="_blank" rel="noopener noreferrer" class="link-button">閩南語選音工具</a>
 	</div>
 	<div class="css-link-container">
-		<code id="cssLink">&lt;link rel="stylesheet" href="https://oikasu1.github.io/fonts/twfonts.css"&gt;</code>
-		<button id="copyButton">複製</button>
+		<code id="cssLink" class="myLink">&lt;link rel="stylesheet" href="https://oikasu1.github.io/fonts/twfonts.css"&gt;</code>
+		<button id="copyCssButton" class="copyButton">複製</button>
 	</div>
+
+	<div class="css-link-container">
+		<code id="jsLink" class="myLink">&lt;script src="https://oikasu1.github.io/fonts/twfonts.js"&lt;/script&gt;</code>
+		<button id="copyJsButton" class="copyButton">複製</button>
+	</div>
+
 
     <div id="font-container"></div>
 
@@ -294,7 +300,7 @@ EngTRESSB	EngTRESSB羅馬拼音	ngaiˇ he hagˋ gaˊ nginˇ, ngai he⁺ hag ngin
 		styleElement.sheet.insertRule(fontFaceRule, styleElement.sheet.cssRules.length);
 	}
 
-        document.getElementById('copyButton').addEventListener('click', function() {
+        document.getElementById('copyCssButton').addEventListener('click', function() {
             var cssLink = document.getElementById('cssLink').textContent;
             navigator.clipboard.writeText(cssLink).then(function() {
                 alert('已複製到剪貼板！');
@@ -303,6 +309,14 @@ EngTRESSB	EngTRESSB羅馬拼音	ngaiˇ he hagˋ gaˊ nginˇ, ngai he⁺ hag ngin
             });
         });
 
+        document.getElementById('copyJsButton').addEventListener('click', function() {
+            var cssLink = document.getElementById('jsLink').textContent;
+            navigator.clipboard.writeText(cssLink).then(function() {
+                alert('已複製到剪貼板！');
+            }, function(err) {
+                console.error('無法複製文字: ', err);
+            });
+        });
     </script>
 </body>
 </html>

@@ -227,3 +227,16 @@
 .tauhu-oo, .Tauhu-Oo{
     font-family: 'tauhu-oo';
 }
+
+
+@font-face{
+    font-family:ToneOZ-Pinyin-Kai-Traditional;
+	src: local("ToneOZ-Pinyin-Kai-Traditional"),
+	    url('ToneOZ-Pinyin-Kai-Traditional.woff2') format("woff2"),
+		url('ToneOZ-Pinyin-Kai-Traditional.otf') format("opentype")
+}
+
+.ToneOZ-Pinyin-Kai, .ToneOZ-Pinyin-Kai-Traditional{
+    font-family: 'ToneOZ-Pinyin-Kai-Traditional';
+}
+

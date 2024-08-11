@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多重 WebFont 載入範例</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #content {
+            text-align: center;
+        }
+        input {
+            font-size: 18px;
+            padding: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <p class="BpmfZihiSans-Regular AA">要套用的文字 (BpmfZihiSans-Regular)</p>
+        <p class="BpmfZihiKaiStd-Regular">要套用的文字 (BpmfZihiKaiStd-Regular)</p>
+        <p class="BpmfZihiBox-R">要套用的文字 (BpmfZihiBox-R)</p>
+        <p class="BpmfZihiOnly-R">要套用的文字 (BpmfZihiOnly-R)</p>
+        <p>不要套用的文字</p>
+    </div>
+    <script>
+
+let twfontsStyleElement;
+const pretwFonts = "要預先載入的文字";
+const twWebFonts = `
+BpmfZihiSans-Regular
+BpmfZihiKaiStd-Regular
+BpmfZihiBox-R
+BpmfZihiOnly-R
+BpmfZihiSerif-Regular
+TaigiKaiStd-TL-R
+TaigiKaiStd-HI-R
+TaigiKaiStd-TLHI-R
+TaigiGenSekiG-TL-R
+TaigiGenSekiG-HI-R
+TaigiGenSekiG-TLHI-R
+TaigiGenRyuM-TL-R
+TaigiGenRyuM-HI-R
+TaigiGenRyuM-TLHI-R
+TaigiGenSenR-TL-R
+TaigiGenSenR-HI-R
+TaigiGenSenR-TLHI-R
+tauhu-oo
+EngTRESSA
+EngTRESSB
+`.trim().split('\n').map(font => font.trim());
+
+function createTwfontsStyleElement() {
+    twfontsStyleElement = document.createElement('style');
+    twfontsStyleElement.id = 'dynamicFontStyle';
+    document.head.appendChild(twfontsStyleElement);
+}
+
+function updateTwfontsStyles() {
+    let styleRules = '';
+    let topUrl = 'https://oikasu1.github.io/fonts/';
+    twWebFonts.forEach(fontName => {
+        const elements = document.getElementsByClassName(fontName);
+        let text = pretwFonts; // 先加入預載入的文字;
+        if (elements.length > 0) {
+            text += Array.from(elements).map(el => el.textContent).join('');
+        }
+        if (text.length > 0) { // 只有當有文字要載入時才創建 @font-face 規則;
+            const unicodeRange = [...new Set(text)].map(char => {
+                const codePoint = char.codePointAt(0);
+                return `U+${codePoint.toString(16).toUpperCase().padStart(4, '0')}`;
+            }).join(', ');
+            styleRules += `
+                @font-face {
+                    font-family: '${fontName}';
+                    src: url('${topUrl}${fontName}.woff2') format('woff2'),
+                         url('${topUrl}${fontName}.woff') format('woff');
+                    unicode-range: ${unicodeRange};
+                }
+                .${fontName} {
+                    font-family: '${fontName}';
+                }
+            `;
+        }
+    });
+    twfontsStyleElement.textContent = styleRules;
+}
+
+// 初始化
+createTwfontsStyleElement();
+updateTwfontsStyles();
+
+    </script>
+</body>
+</html>

@@ -105,7 +105,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: calc(100% - 70px);
+        max-width: calc(100% - 105px);
     }
 
     #copyButton {
@@ -119,10 +119,50 @@
         flex-shrink: 0;
     }
 
+    .link-buttons-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+
+    .link-button {
+        display: inline-block;
+        padding: 8px 12px;
+        background-color: #4a90e2;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .link-button:hover {
+        background-color: #5ca0e2;
+    }
+
+    @media (max-width: 600px) {
+        .link-buttons-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .link-button {
+            width: 100%;
+            text-align: center;
+        }
+    }
 </style>
 </head>
 <body>
-    <h1>中文字體展示與下載</h1>
+    <h1>twfonts中文字體</h1>
+	<div class="link-buttons-container">
+		<a href="https://github.com/oikasu1/fonts" target="_blank" rel="noopener noreferrer" class="link-button">各字體授權 LICENSE</a>
+		<a href="https://buttaiwan.github.io/bpmfvs/" target="_blank" rel="noopener noreferrer" class="link-button">華語破音字選音工具</a>
+		<a href="https://buttaiwan.github.io/taigivs/" target="_blank" rel="noopener noreferrer" class="link-button">閩南語勾破字選音工具</a>
+	</div>
 	<div class="css-link-container">
 		<code id="cssLink">&lt;link rel="stylesheet" href="https://oikasu1.github.io/fonts/twfonts.css"&gt;</code>
 		<button id="copyButton">複製</button>
@@ -135,26 +175,26 @@
     <script>
         const twfonts = `
 樣式名	中文名	範例文字
-BpmfZihiSans-Regular	華語黑體注音	華語黑體注音
-BpmfZihiKaiStd-Regular	華語楷體注音	華語楷體注音
-BpmfZihiBox-R	華語方框注音	華語方框注音
-BpmfZihiOnly-R	華語只有注音	華語只有注音
-BpmfZihiSerif-Regular	華語宋體注音	華語宋體注音
-TaigiKaiStd-TL-R	閩南語楷體台羅	閩南語楷體台羅
-TaigiKaiStd-HI-R	閩南語楷體注音	閩南語楷體注音
-TaigiKaiStd-TLHI-R	閩南語楷體台羅注音	閩南語楷體台羅注音
-TaigiGenRyuM-TL-R	閩南語宋體台羅	閩南語宋體台羅
-TaigiGenRyuM-HI-R	閩南語宋體注音	閩南語宋體注音
-TaigiGenRyuM-TLHI-R	閩南語宋體台羅注音	閩南語宋體台羅注音
-TaigiGenSekiG-TL-R	閩南語黑體台羅	閩南語黑體台羅
-TaigiGenSekiG-HI-R	閩南語黑體注音	閩南語黑體注音
-TaigiGenSekiG-TLHI-R	閩南語黑體台羅注音	閩南語黑體台羅注音
-TaigiGenSenR-TL-R	閩南語圓體台羅	閩南語圓體台羅
-TaigiGenSenR-HI-R	閩南語圓體注音	閩南語圓體注音
-TaigiGenSenR-TLHI-R	閩南語圓體台羅注音	閩南語圓體台羅注音
+BpmfZihiSans-Regular	ㄅ字嗨注音黑體 Regular	華語黑體注音
+BpmfZihiKaiStd-Regular	ㄅ字嗨注音標楷 Regular	華語楷體注音
+BpmfZihiBox-R	ㄅ字嗨注音加框 R	華語方框注音
+BpmfZihiOnly-R	ㄅ字嗨注音而已 R	華語只有注音
+BpmfZihiSerif-Regular	ㄅ字嗨注音宋體 Regular	華語宋體注音
+TaigiKaiStd-TL-R	字咍標楷 台羅 R	閩南語楷體台羅
+TaigiKaiStd-HI-R	字咍標楷 方音 R	閩南語楷體注音
+TaigiKaiStd-TLHI-R	字咍標楷 台羅方音 R	閩南語楷體台羅注音
+TaigiGenSekiG-TL-R	字咍源石黑體 台羅 R	閩南語黑體台羅
+TaigiGenSekiG-HI-R	字咍源石黑體 方音 R	閩南語黑體注音
+TaigiGenSekiG-TLHI-R	字咍源石黑體 台羅方音 R	閩南語黑體台羅注音
+TaigiGenRyuM-TL-R	字咍源流明體 台羅 R	閩南語明體台羅
+TaigiGenRyuM-HI-R	字咍源流明體 方音 R	閩南語明體注音
+TaigiGenRyuM-TLHI-R	字咍源流明體 台羅方音 R	閩南語明體台羅注音
+TaigiGenSenR-TL-R	字咍源泉圓體 台羅 R	閩南語圓體台羅
+TaigiGenSenR-HI-R	字咍源泉圓體 方音 R	閩南語圓體注音
+TaigiGenSenR-TLHI-R	字咍源泉圓體 台羅方音 R	閩南語圓體台羅注音
+Tauhu-Oo	豆腐黑體	你𠊎佢，𫣆人攏真𠢕！
 EngTRESSA	EngTRESSA羅馬拼音	ngaiˇ he hagˋ gaˊ nginˇ, ngai he⁺ hag ngin, ngaiˋ gongˆ kaˊ su. Tsi̍t ki tsháu, tsi̍t tiám lōo.
 EngTRESSB	EngTRESSB羅馬拼音	ngaiˇ he hagˋ gaˊ nginˇ, ngai he⁺ hag ngin, ngaiˋ gongˆ kaˊ su. Tsi̍t ki tsháu, tsi̍t tiám lōo.
-tauhu-oo	豆腐黑體	豆腐黑體
 `;
 
         const fontContainer = document.getElementById('font-container');
@@ -220,33 +260,31 @@ tauhu-oo	豆腐黑體	豆腐黑體
         });
 
 
-        function updateFontFace(fontName, text) {
-            const unicodeRange = [...new Set(text)].map(char => 
-                `U+${char.charCodeAt(0).toString(16).padStart(4, '0')}`
-            ).join(', ');
+	function updateFontFace(fontName, text) {
+		const unicodeRange = [...new Set(text)].map(char => {
+			const codePoint = char.codePointAt(0);
+			return `U+${codePoint.toString(16).toUpperCase().padStart(4, '0')}`;
+		}).join(', ');
 
-            const fontFaceRule = `
-                @font-face {
-                    font-family: '${fontName}';
-                    src: url('${fontName}.woff2') format('woff2'),
-                         url('${fontName}.woff') format('woff');
-                    unicode-range: ${unicodeRange};
-                }
-            `;
+		const fontFaceRule = `
+			@font-face {
+				font-family: '${fontName}';
+				src: url('${fontName}.woff2') format('woff2'),
+					 url('${fontName}.woff') format('woff');
+				unicode-range: ${unicodeRange};
+			}
+		`;
 
-            // 移除舊的 @font-face 規則（如果存在）
-            for (let i = 0; i < styleElement.sheet.cssRules.length; i++) {
-                if (styleElement.sheet.cssRules[i].cssText.includes(`font-family: '${fontName}'`)) {
-                    styleElement.sheet.deleteRule(i);
-                    break;
-                }
-            }
+		for (let i = 0; i < styleElement.sheet.cssRules.length; i++) {
+			if (styleElement.sheet.cssRules[i].cssText.includes(`font-family: '${fontName}'`)) {
+				styleElement.sheet.deleteRule(i);
+				break;
+			}
+		}
 
-            // 添加新的 @font-face 規則
-            styleElement.sheet.insertRule(fontFaceRule, styleElement.sheet.cssRules.length);
-        }
+		styleElement.sheet.insertRule(fontFaceRule, styleElement.sheet.cssRules.length);
+	}
 
-        // 添加複製功能
         document.getElementById('copyButton').addEventListener('click', function() {
             var cssLink = document.getElementById('cssLink').textContent;
             navigator.clipboard.writeText(cssLink).then(function() {
